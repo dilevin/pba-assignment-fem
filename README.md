@@ -41,7 +41,7 @@ Finally, the code runs, headless and can write results to a USD file which can b
 python main.py --scene=tests/{SCENE_PYTHON_FILE}.py --usd_output={FULL_PATH_AND_NAME}.usd --num_steps={Number of steps to run}
 ```
 ## Assignment Structure and Instructions
-1. You are responsible for implementing all functions found in the [assignments](./assignments) subdirectory.
+1. You are responsible for implementing all functions found in the [assignments](./assignment) subdirectory.
 2. The [tests](./tests) subdirectory contains the scenes, specified as python files,  we will validate your code against.
 3. The test_output subdirectory contains output from the solution code that you can use to validate your code. This output comes in two forms. (1) **USD (Universal Scene Description)** files which contain simulated results. These can be played back in any USD viewer. I use [Blender](blender.org). You can output your own simulations as USD files, load both files in blender and examine the simulations side-by-side. (2) Two.pt files which contains the global mass matrix (as a dense matrix) for the one_tet_fall.py scene and the bunny_fall.py scene which you can (load)[https://docs.pytorch.org/docs/stable/generated/torch.load.html] and compare your own code to.
 
