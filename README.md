@@ -206,7 +206,7 @@ where <img src="images/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode" 
 3. If you are using Visual Studio Code or Cursor, use the [interactive debugger](https://code.visualstudio.com/docs/python/debugging) and python debugging console.
    
 ## Admissable Code and Libraries
-You are allowed to use SymPy for computing formulas for integrals, derivatives and gradients. You are allowed to use any functions in the warp and warp.spare packages. You ARE NOT allowed to use code from other warp packages like warp.fem. You are not allowed to use any of warps specialized spatial data structures for storing meshes, volumes or doing spatial subdivision. You cannot use code from any other external simulation library.  
+You are allowed to use SymPy for computing formulas for integrals, derivatives and gradients. You are allowed to use any functions in the warp and warp.sparse packages. You ARE NOT allowed to use code from other warp packages like warp.fem. You are not allowed to use any of warps specialized spatial data structures for storing meshes, volumes or doing spatial subdivision. You cannot use code from any other external simulation library.  
 
 ## Hand-In
 We will collect and grade the assignment using MarkUs, link **coming soon**
