@@ -196,7 +196,7 @@ The initial step is to divide the object to be simulated into a collection of te
 
 <p align="center"><img src="images/cc44391faa5e8aa1e9178dd46a4b72ae.svg?invert_in_darkmode" align=middle width=79.37236725pt height=108.49566915pt/></p> 
 
-where <img src="images/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode" align=middle width=9.86687624999999pt height=14.15524440000002pt/> is the number of vertices in the mesh. We use selection matrices (as we did in [assignment 2](https://github.com/dilevin/CSC417-a2-mass-spring-3d)) which yield identical assembly operations for the global forces, stiffness and mass matrix. 
+where <img src="images/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode" align=middle width=9.86687624999999pt height=14.15524440000002pt/> is the number of vertices in the mesh. We use selection matrices ) which yield identical assembly operations for the global forces, stiffness and mass matrix. In this assignment the assembly code is given to you in the [given](./given) subdirectory. Feel free to take a look at [it](mass_matrix_object.py)
 
 ## Admissable Code and Libraries
 You are allowed to use SymPy for computing formulas for integrals, derivatives and gradients. You are allowed to use any functions in the warp and warp.spare packages. You ARE NOT allowed to use code from other warp packages like warp.fem. You are not allowed to use any of warps specialized spatial data structures for storing meshes, volumes or doing spatial subdivision. You cannot use code from any other external simulation library.  
