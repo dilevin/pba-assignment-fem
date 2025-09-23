@@ -163,7 +163,7 @@ Like the spring strain, <img src="images/cbe99f908f3661c44ad20094523bbf90.svg?in
 The potential energy function of a tetrahedron is a function that associates a single number to each value of the deformation gradient. Sadly, for the FEM case, things are a little more complicated than just squaring <img src="images/b8bc815b5e9d5177af01fd4d3d3c2f10.svg?invert_in_darkmode" align=middle width=12.85392569999999pt height=22.465723500000017pt/> (but thankfully not much). 
 
 ### The Strain Energy density
-In this assignment we use the Stable Neohookean strain energy density from Theodore Kim's [Dynamic Deformables](https://www.tkim.graphics/DYNAMIC_DEFORMABLES/). The formula for this energy relies on computing what are called invariants of the Right Cauchy-Green Strain tensor. In this case we will define $$I2 = tr(\mathbf{F}^T\mathbf{T}), where $$F\in\mathcal{}R^{3x3}$$ is the deformation gradient and $$tr()$$ computes the trace of a matrix. 
+In this assignment we use the Stable Neohookean strain energy density from Theodore Kim's [Dynamic Deformables](https://www.tkim.graphics/DYNAMIC_DEFORMABLES/). The formula for this energy relies on computing what are called invariants of the Right Cauchy-Green Strain tensor. In this case we will define $I2 = tr(\mathbf{F}^T\mathbf{T})$, where $F\in\mathcal{}R^{3x3}$ is the deformation gradient and $tr()$ computes the trace of a matrix. 
 
 
 ### Numerical quadrature
