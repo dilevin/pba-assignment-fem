@@ -162,6 +162,42 @@ Like the spring strain, <img src="images/cbe99f908f3661c44ad20094523bbf90.svg?in
 
 The potential energy function of a tetrahedron is a function that associates a single number to each value of the deformation gradient. Sadly, for the FEM case, things are a little more complicated than just squaring <img src="images/b8bc815b5e9d5177af01fd4d3d3c2f10.svg?invert_in_darkmode" align=middle width=12.85392569999999pt height=22.465723500000017pt/> (but thankfully not much). 
 
+### The Strain Energy density
+
+
+
+### Numerical quadrature
+Typically we don't evaluate potential energy integrals by hand. They get quite impossible, especially as the FEM basis becomes more complex. To avoid this we typically rely on [numerical quadrature](https://en.wikipedia.org/wiki/Numerical_integration). In numerical quadrature we replace an integral with a weighted sum over the domain. We pick some quadrature points <img src="images/9b01119ffd35fe6d8a8795a24fc11616.svg?invert_in_darkmode" align=middle width=18.943064249999992pt height=22.55708729999998pt/> (specified in barycentric coordinates for tetrahedral meshes) and weights <img src="images/c2a29561d89e139b3c7bffe51570c3ce.svg?invert_in_darkmode" align=middle width=16.41940739999999pt height=14.15524440000002pt/> and evaluate
+
+<p align="center"><img src="images/7f5d5d26767ddfc8af4bc7e06443c91a.svg?invert_in_darkmode" align=middle width=164.90166989999997pt height=48.1348461pt/></p>
+
+However, for linear FEM, the quadrature rule is exceedingly simple. Recall that linear basis functions imply constant deformation per tetrahedron. That means the strain energy density function is constant over the tetrahedron. Thus the perfect quadrature rule is to choose <img src="images/9b01119ffd35fe6d8a8795a24fc11616.svg?invert_in_darkmode" align=middle width=18.943064249999992pt height=22.55708729999998pt/> as any point inside the tetrahedron (I typically use the centroid) and <img src="images/c2a29561d89e139b3c7bffe51570c3ce.svg?invert_in_darkmode" align=middle width=16.41940739999999pt height=14.15524440000002pt/> as the volume of the tetrahedron. This is called *single point* quadrature because it estimates the value of an integral by evaluating the integrated function at a single point. 
+
+## Forces and stiffness
+
+The per-element generalized forces acting on a single tetrahedron are given by 
+
+<p align="center"><img src="images/0a4b8813bf5f5396689dcc60d64ab92e.svg?invert_in_darkmode" align=middle width=72.3931461pt height=37.0084374pt/></p>
+
+and the stiffness is given by 
+
+<p align="center"><img src="images/846606bb011963601357e7ffbb1c2e4d.svg?invert_in_darkmode" align=middle width=87.95259164999999pt height=38.973783749999996pt/></p>
+
+These can be directly computed from the quadrature formula above. Again, typically one uses symbolic computer packages to take these derivatives and you are allows (and encouraged) to do that for this assignment. 
+
+For a tetrahedron the per-element forces are a <img src="images/1035a4ac6789d259e5b11678e1db3967.svg?invert_in_darkmode" align=middle width=44.748820049999985pt height=21.18721440000001pt/> vector while the per-element stiffness matrix is a dense, <img src="images/97ab0bce852d417ba9871adc2af7bb26.svg?invert_in_darkmode" align=middle width=52.968029399999985pt height=21.18721440000001pt/> matrix. 
+
+## From a Single Tetrahedron to a Mesh 
+Extending all of the above to objects more complicated than a single tetrahedron is analogous to our previous jump from a single spring to a mass-spring system. 
+
+![A tetrahedral mesh](images/tet_mesh.png)
+
+The initial step is to divide the object to be simulated into a collection of tetrahedra. Neighboring tetrahedra share vertices. We now specify the generalized coordinates of this entire mesh as 
+
+<p align="center"><img src="images/cc44391faa5e8aa1e9178dd46a4b72ae.svg?invert_in_darkmode" align=middle width=79.37236725pt height=108.49566915pt/></p> 
+
+where <img src="images/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode" align=middle width=9.86687624999999pt height=14.15524440000002pt/> is the number of vertices in the mesh. We use selection matrices (as we did in [assignment 2](https://github.com/dilevin/CSC417-a2-mass-spring-3d)) which yield identical assembly operations for the global forces, stiffness and mass matrix. 
+
 ## Admissable Code and Libraries
 You are allowed to use SymPy for computing formulas for integrals, derivatives and gradients. You are allowed to use any functions in the warp and warp.spare packages. You ARE NOT allowed to use code from other warp packages like warp.fem. You are not allowed to use any of warps specialized spatial data structures for storing meshes, volumes or doing spatial subdivision. You cannot use code from any other external simulation library.  
 
