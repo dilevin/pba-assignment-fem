@@ -22,7 +22,10 @@ conda install cuda -c nvidia/label/cuda-12.1.0
 ```
 Assignment code templates are stored in the ```{ROOT_DIR}/assginment``` directory. 
 
-**WIKNDOWS NOTE:*** If youb want to run the assignmetns using your GPU you may have to force install torch with CUDA support using ```pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121```
+**WIKNDOWS NOTE:*** If youb want to run the assignmetns using your GPU you may have to force install torch with CUDA support using 
+```
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
 
 ## Tools You Will Use
 1. [NVIDIA Warp](https://github.com/NVIDIA/warp) -- python library for kernel programming
