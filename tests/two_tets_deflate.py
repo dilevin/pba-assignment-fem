@@ -30,10 +30,10 @@ class TwoTetsConfig(SimulationConfig):
             mesh=str(get_data_directory() / "two_tets.mesh"),
             initial_velocity=[0.0, 0.0, 0.0],  # Moving to the right
             transform=[
-                [1.0, 0.0, 0.0, 0.0],
-                [0.0, 1.0, 0.0, 0.0],
-                [0.0, 0.0, 1.0, 0.0],
-                [0.0, 0.0, 0.0, 1.0]
+                [1.5, 0.0, 0.0, 0.0],
+                [0.0, 1.5, 0.0, 0.0],
+                [0.0, 0.0, 1.5, 0.0],
+                [0.0, 0.0, 0.0, 1.5]
             ],
             material=tet_material,
  
@@ -43,6 +43,6 @@ class TwoTetsConfig(SimulationConfig):
         super().__init__(
             objects=[tet1],
             timestep=0.01,
-            gravity=[0.0, -9.8, 0.0],
+            gravity=[0.0, 0.0, 0.0],
             solver_settings=solver_settings
         )

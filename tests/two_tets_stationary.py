@@ -43,6 +43,6 @@ class TwoTetsConfig(SimulationConfig):
         super().__init__(
             objects=[tet1],
             timestep=0.01,
-            gravity=[0.0, -9.8, 0.0],
+            gravity=[0.0, 0.0, 0.0],
             solver_settings=solver_settings
         )

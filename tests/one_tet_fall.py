@@ -29,7 +29,7 @@ class OneTetConfig(SimulationConfig):
         tet1 = ObjectConfig(
             geometry_type="solid",
             mesh=str(get_data_directory() / "tet.mesh"),
-            initial_velocity=[1.0, 0.0, 0.0],  # Moving to the right
+            initial_velocity=[0.0, 0.0, 0.0],  # Moving to the right
             transform=[
                 [1.0, 0.0, 0.0, 0.0],
                 [0.0, 1.0, 0.0, 0.0],
