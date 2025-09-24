@@ -9,7 +9,7 @@ instructions at the preceeding link for your operating system
 
 Checkout the code ```git clone git@github.com:dilevin/physics-based-animation-fem.git {ROOT_DIR}```, where **{ROOT_DIR}*** is a directory you specify for the source code. 
 
-Next create a virtual environment and install relevant depencies install python dependencies.
+Next create a virtual environment and install relevant dependencies install python dependencies.
 ```
 cd {ROOT_DIR}
 conda create -n csc417  python=3.12 -c conda-forge
@@ -22,7 +22,7 @@ conda install cuda -c nvidia/label/cuda-12.1.0
 ```
 Assignment code templates are stored in the ```{ROOT_DIR}/assginment``` directory. 
 
-**WIKNDOWS NOTE:*** If youb want to run the assignmetns using your GPU you may have to force install torch with CUDA support using 
+**WINDOWS NOTE:*** If you want to run the assignments using your GPU you may have to force install torch with CUDA support using 
 ```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
