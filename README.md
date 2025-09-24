@@ -9,7 +9,7 @@ instructions at the preceeding link for your operating system
 
 Checkout the code ```git clone git@github.com:dilevin/physics-based-animation-fem.git {ROOT_DIR}```, where **{ROOT_DIR}*** is a directory you specify for the source code. 
 
-Next create a virtual environment and install relevant dependencies install python dependencies.
+Next create a virtual environment and install relevant python dependencies install.
 ```
 cd {ROOT_DIR}
 conda create -n csc417  python=3.12 -c conda-forge
@@ -22,10 +22,28 @@ conda install cuda -c nvidia/label/cuda-12.1.0
 ```
 Assignment code templates are stored in the ```{ROOT_DIR}/assginment``` directory. 
 
-**WINDOWS NOTE:*** If you want to run the assignments using your GPU you may have to force install torch with CUDA support using 
+**WINDOWS NOTE:** If you want to run the assignments using your GPU you may have to force install torch with CUDA support using 
 ```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
+
+### Installation without conda
+If you are having too many problems with Conda or prefer to use another package manager, we recommend using [UV](https://docs.astral.sh/uv/getting-started/installation/). If you do not have it installed, follow the instructions at the preceeding link for your operating system
+
+Next, create a virtual environment and install relevant python dependencies:
+
+```
+cd {ROOT_DIR}
+uv venv
+uv pip install -e . 
+```
+
+If you opted to use UV, you can run the examples using:
+
+```
+uv run python main.py <arguments-for-tests>
+```
+
 
 ## Tools You Will Use
 1. [NVIDIA Warp](https://github.com/NVIDIA/warp) -- python library for kernel programming
