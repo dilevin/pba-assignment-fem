@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "assignment"
+version = "0.0.1"
+dependencies = [
+"warp-lang==1.8.0",
+"torch",
+"numpy",
+"panda3d==1.10.15",
+"pytest",
+"polyscope",
+"libigl",
+"usd-core",
+"sympy"
+]
+
+
+[tool.setuptools]
+packages = ["assignment", "utils","given"]
