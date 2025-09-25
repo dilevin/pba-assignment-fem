@@ -7,7 +7,7 @@ In this assignment you will learn to implement the finite element method for bot
 These instructions use [Conda](https://docs.conda.io/projects/conda/en/stable/user-guide/getting-started.html) for virtual environment. If you do not have it installed, follow the 
 instructions at the preceeding link for your operating system
 
-Checkout the code ```git clone git@github.com:dilevin/physics-based-animation-fem.git {ROOT_DIR}```, where **{ROOT_DIR}*** is a directory you specify for the source code. 
+Checkout the code ```git clone git@github.com:dilevin/pba-assignment-fem.git {ROOT_DIR}```, where **{ROOT_DIR}*** is a directory you specify for the source code. 
 
 Next create a virtual environment and install relevant python dependencies install.
 ```
