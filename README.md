@@ -184,7 +184,7 @@ The potential energy function of a tetrahedron is a function that associates a s
 ### The Strain Energy density
 In this assignment we use the Stable Neohookean strain energy density from Theodore Kim's [Dynamic Deformables](https://www.tkim.graphics/DYNAMIC_DEFORMABLES/). The formula for this energy relies on computing what are called invariants of the Right Cauchy-Green Strain tensor. In this case we will define $I_2 = tr(\mathbf{F}^T\mathbf{F})$, where $\mathbf{F}\in\mathcal{}R^{3x3}$ is the deformation gradient and $tr()$ computes the trace of a matrix. We will also define $I_3 = det(\mathbf{F}$ which is just the determinant of the deformation gradient. The stable Neohookean potential energy is then given by:
 
-$\Psi(\mathbf{F}) = \frac{1}{2}\mu(I_2 - 3) - \mu(I_3-1) + \frac{1}{2}(I_3 -1)^2$ 
+$\Psi(\mathbf{F}) = \frac{1}{2}\mu(I_2 - 3) - \mu(I_3-1) + \frac{1}{2}\lambda(I_3 -1)^2$ 
 
 
 ### Numerical quadrature
